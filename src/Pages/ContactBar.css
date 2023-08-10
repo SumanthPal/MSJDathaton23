@@ -1,0 +1,21 @@
+.contact-bar {
+    background-color: #111111;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 999; /* Ensure it's on top of other content */
+}
+
+.contact-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 16px;
+}
+
+.contact-links a:hover {
+    text-decoration: underline;
+}

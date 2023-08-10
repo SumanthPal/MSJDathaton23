@@ -1,0 +1,133 @@
+/* Judging.css */
+
+body {
+    transition: background-color 0.5s ease-in-out;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.judge {
+    padding: 50px;
+    color: #333;
+    text-align: left;
+}
+
+.header {
+    padding: 40px;
+    text-align: center;
+    color: #DDEEDF;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #DDEEDF;
+    align-content: center;
+}
+
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #DDEEDF;
+}
+
+.subsection {
+    margin-top: 20px;
+    padding-top: 10px;
+    padding: 15px;
+    border: 1px solid #DDEEDF;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    background-color: rgba(0, 34, 210, 0.1);
+}
+
+.subsection-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #DDEEDF;
+}
+
+.title-big {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #DDEEDF;
+}
+
+ul {
+    list-style: none;
+    margin-left: 25px;
+    margin-bottom: 20px;
+}
+
+li {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+    padding: 20px;
+    color: #DDEEDF;
+    font-weight: bold;
+}
+
+.ps-pps {
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    animation: float 3s infinite alternate;
+    filter: blur(3px);
+}
+
+.ps-pps:hover {
+    transform: translateX(0) translateY(0);
+    filter: none;
+    opacity: 1;
+    animation: none;
+}
+
+.ps-pps::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-10px, 0);
+    filter: none;
+    opacity: 1;
+    color: #DDEEDF;
+}
+
+.prizes {
+    margin-top: 40px;
+
+}
+
+.prize-item {
+    border: 2px solid #DDEEDF;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    outline: 2px solid transparent;
+    transition: outline-color 0.3s ease-in-out;
+}
+
+.prize-item:hover {
+    outline-color: #DDEEDF;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateX(0) translateY(0);
+    }
+    50% {
+        transform: translateX(5px) translateY(5px);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

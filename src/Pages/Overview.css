@@ -1,0 +1,109 @@
+/* Overview.css */
+
+body {
+    transition: background-color 0.5s ease-in-out;
+    margin: 0;
+    font-family: Arial, sans-serif; /* Specify a font family */
+}
+
+.overview-container {
+    padding: 50px;
+    color: #333;
+    text-align: left;
+}
+
+.title-section {
+    padding: 40px;
+    text-align: center;
+    color: #FFF8D6;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+p {
+    font-size: 1.5rem; /* Adjust font size */
+    margin-bottom: 20px; /* Increase margin bottom */
+    color: #FFF8D6;
+}
+
+.title {
+    font-size: 1.8rem; /* Adjust font size */
+    margin-bottom: 10px;
+    color: #FFF8D6;
+}
+
+.subsection {
+    margin-top: 20px;
+    padding-top: 10px;
+    padding: 15px;
+    }
+
+.subsection-title {
+    font-size: 1.2rem; /* Adjust font size */
+    margin-bottom: 10px;
+    color: #F7E1AE;
+}
+
+/* New styles for the title */
+.title-big {
+    font-size: 2.5rem; /* Adjust font size */
+    margin-bottom: 10px;
+    color: #F7E1AE;
+}
+
+ul {
+    list-style: disc;
+    margin-left: 25px; /* Adjust margin left */
+    margin-bottom: 20px; /* Add margin bottom for the entire list */
+}
+
+li {
+    font-size: 1.4rem; /* Adjust font size for list items */
+    margin-bottom: 8px; /* Adjust margin bottom for list items */
+    color: #ffb800; /* Use gold color for list items */
+}
+
+/* Animation for PS and PPS paragraphs */
+.ps-pps {
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    animation: float 3s infinite alternate; /* Add animation for floating effect */
+    filter: blur(3px); /* Add initial blur effect */
+}
+
+.ps-pps:hover {
+    transform: translateX(0) translateY(0);
+    filter: none; /* Remove blur effect on hover */
+    opacity: 1;
+    animation: none; /* Disable animation on hover */
+}
+
+.ps-pps::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-10px, 0);
+    filter: none;
+    opacity: 1;
+    color: #ffb800;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateX(0) translateY(0);
+    }
+    50% {
+        transform: translateX(5px) translateY(5px);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
